@@ -1,0 +1,242 @@
+@media(min-width: 600px) {
+    body {
+        display: none;
+    }
+}
+@font-face {
+    font-family: "MyFont";
+    src: url("/resources/font/OpenSans-Light.ttf") format("truetype"),
+    url("/resources/font/") format("truetype");
+}
+
+:root {
+    --width: 100%;
+    --height: 100%;
+    --color-two-vacxin:#32B25D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 10px;
+    font-family: 'Myfont', 'Open Sans Semibold', sans-serif;
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: var(--width);
+    height: var(--height);
+    background-color: #dfdfdf;
+    overflow: hidden;
+    /* display: none; */
+    
+}
+
+.container {
+    width: calc(var(--width) - 10%);
+    height: calc(var(--height) - 8%);
+    /* margin: 10px 7px; */
+    border-radius: 14px;
+    background-color: #fbfdfb;
+    overflow: hidden;
+}
+
+.above {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(var(--height) - 40%);
+    width: var(--width);
+}
+
+.header {
+    margin: 15px;
+}
+
+.header-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.header-location {
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.qr-code {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 180px;
+    height: 180px;
+    background-color: #fbfdfb;
+    margin: 0;
+    /* padding: 10px; */
+    border-radius: 14px;
+}
+
+.qr-time-update{
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: var(--color-two-vacxin);
+}
+
+.qr-hide-text{
+    font-size: 0.55rem;
+    color: #AAA;
+}
+
+.qr-code img {
+    display: inline-block;
+    width: 75%;
+    height: 75%;
+    /* margin: 10px; */
+}
+
+.info-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.fullname{
+    font-size: 0.9rem;
+    color: #000;
+    font-weight: 600;
+}
+
+.gender-birthday{
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.info-inject {
+    width: var(--width);
+    margin: 0;
+    margin-top: -2px;
+    padding: 0 0px;
+}
+
+.info-inject img{
+    width: var(--width);
+    height: var(--height);
+}
+
+.below{
+    width: var(--width);
+    margin: 0;
+    padding: 0 0px;
+}
+
+.below img{
+    width: var(--width);
+    height: var(--height);
+}
+
+/* css Location Province */
+
+.root-province{
+    display: none;
+    margin: 10px 5px 5px 5px;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    overflow-y: scroll;
+}
+
+.root-province{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.location{
+    display: block;
+    margin: 10px;
+    position: sticky;
+}
+
+.location input{
+    padding-left: 8px;
+    border-color: #aaa;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    height: 40px;
+    width: 100%;
+}
+
+.location-header-text{
+    color: var(--color-two-vacxin);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.location-header-text img{
+    position: absolute;
+    left: 0;
+    margin-left: 8px;
+}
+
+.location-header-text span{
+    display: inline-block;
+   padding-bottom: 3px;
+}
+
+.province p{
+    margin: 10px 15px;
+}
+
+.d-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.d-flex-row {
+    display: flex;
+    align-items: center;
+}
+
+.d-flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-flex-row-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.font-white {
+    color: white;
+}
+
+.font-black {
+    color: black;
+}
+
+.font-gray {
+    color: gray;
+}
+
+.bg-two-vacxin {
+    background-color: var(--color-two-vacxin);
+}
