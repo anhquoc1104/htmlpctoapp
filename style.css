@@ -162,12 +162,12 @@ body {
 .root-province{
     display: none;
     width: 100%;
-    height: 1100%;
+    height: 100%;
     padding: 10px 5px 5px 5px;
     background-color: #fff;
     color: #000;
     font-size: 1.2rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     overflow-y: scroll;
     background-color: #fff;
     /* overflow: hidden; */
@@ -229,7 +229,7 @@ body {
 }
 
 .province p{
-    margin: 10px 15px;
+    margin: 15px 15px;
 }
 
 .d-flex-column {
