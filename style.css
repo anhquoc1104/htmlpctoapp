@@ -35,14 +35,12 @@ body {
     height: var(--height);
     background-color: #dfdfdf;
     overflow: hidden;
-    /* display: none; */
     
 }
 
 .container {
     width: calc(var(--width) - 10%);
     height: calc(var(--height) - 8%);
-    /* margin: 10px 7px; */
     border-radius: 14px;
     background-color: #fbfdfb;
     overflow: hidden;
@@ -60,19 +58,26 @@ body {
     margin: 20px;
 }
 
-.header-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    word-spacing: 1px;
+.header-title  {
+    width: 100%;
+    position: relative;
     margin-bottom: 3px;
 }
 
+.header-title span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    word-spacing: 1px;
+}
+
 .header-title  img{
-   margin-left: 4px;
+    position: absolute;
+    bottom: 5px;
+   margin-left: 5px;
 }
 
 .header-location {
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: bold;
     word-spacing: 1px;
 }
@@ -83,10 +88,8 @@ body {
     align-items: center;
     justify-content: space-evenly;
     width: 60%;
-    /* height: 60%; */
     background-color: #fbfdfb;
     margin: 0;
-    /* padding: 10px; */
     border-radius: 18px;
 }
 
@@ -95,7 +98,7 @@ body {
 }
 
 .qr-time-update{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
     color: var(--color-two-vacxin);
 }
@@ -184,7 +187,7 @@ body {
 
 .location{
     display: block;
-    width: calc(100% - 40px);
+    width: calc(100% );
     padding: 30px  20px  20px  20px;
     position: sticky;
     top: 0;
