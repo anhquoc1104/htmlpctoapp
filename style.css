@@ -5,7 +5,7 @@
 }
 @font-face {
     font-family: "MyFont";
-    src: url("/resources/font/OpenSans-Light.ttf") format("truetype"),
+    src: url("/resources/font/OpenSans-Semibold.ttf") format("truetype"),
     url("/resources/font/") format("truetype");
 }
 
@@ -52,22 +52,29 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: calc(var(--height) - 40%);
     width: var(--width);
+    height: calc(var(--height) - 45%);
 }
 
 .header {
-    margin: 15px;
+    margin: 20px;
 }
 
 .header-title {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 600;
+    word-spacing: 1px;
+    margin-bottom: 3px;
+}
+
+.header-title  img{
+   margin-left: 4px;
 }
 
 .header-location {
-    font-size: .8rem;
+    font-size: .9rem;
     font-weight: bold;
+    word-spacing: 1px;
 }
 
 .qr-code {
@@ -75,29 +82,37 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 180px;
-    height: 180px;
+    width: 60%;
+    /* height: 60%; */
     background-color: #fbfdfb;
     margin: 0;
     /* padding: 10px; */
-    border-radius: 14px;
+    border-radius: 18px;
+}
+
+.qr-time{
+    padding: 6px;
 }
 
 .qr-time-update{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: bold;
     color: var(--color-two-vacxin);
 }
 
 .qr-hide-text{
-    font-size: 0.55rem;
+    padding: 6px;
+}
+
+.qr-hide-text span{
+    font-size: 0.7rem;
     color: #AAA;
 }
 
 .qr-code img {
     display: inline-block;
     width: 75%;
-    height: 75%;
+    /* height: 75%; */
     /* margin: 10px; */
 }
 
@@ -109,13 +124,13 @@ body {
 }
 
 .fullname{
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     color: #000;
     font-weight: 600;
 }
 
 .gender-birthday{
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 

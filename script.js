@@ -12,3 +12,8 @@ $('.header img').addEventListener('click', function () {
     $('.root').style.display = 'none'
     $('.root-province').style.display = 'block'
 })
+
+$('.location-header-text img').addEventListener('click', function () {
+    $('.root').style.display = 'flex'
+    $('.root-province').style.display = 'none'
+})
