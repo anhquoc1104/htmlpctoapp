@@ -147,7 +147,7 @@ body {
 
 .gender-birthday{
     font-size: 1rem;
-    font-weight: lighter;
+    /* font-weight: lighter; */
 }
 
 .info-inject {
