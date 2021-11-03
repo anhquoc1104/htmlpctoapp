@@ -5,7 +5,7 @@
 }
 @font-face {
     font-family: "MyFont";
-    src: url("/resources/font/OpenSans-Semibold.ttf") format("truetype"),
+    src: url("/resources/font/OpenSans-Regular.ttf") format("truetype"),
     url("/resources/font/") format("truetype");
 }
 
@@ -87,18 +87,25 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 60%;
+    width: 65%;
     background-color: #fbfdfb;
     margin: 0;
     border-radius: 18px;
 }
 
 .qr-time{
-    padding: 6px;
+    padding: 10px;
 }
 
 .qr-time-update{
     font-size: 0.9rem;
+    /* font-weight: bold; */
+    color: var(--color-two-vacxin);
+}
+
+.province-text-hide{
+    display: none;
+    font-size: 1.3rem;
     font-weight: bold;
     color: var(--color-two-vacxin);
 }
@@ -107,16 +114,26 @@ body {
     padding: 6px;
 }
 
-.qr-hide-text span{
+.qr-hide-text .qr-info-hide-text{
     font-size: 0.7rem;
     color: #AAA;
 }
 
+.qr-hide-text .settimeout-hide{
+    display: none;
+    font-size: 0.9rem;
+    color: #AAA;
+}
+
+.qr-hide-text .settimeout-hide-time{
+    /* display: none; */
+    font-size: 0.9rem;
+    color: var(--color-two-vacxin);
+}
+
 .qr-code img {
     display: inline-block;
-    width: 75%;
-    /* height: 75%; */
-    /* margin: 10px; */
+    width: 78%;
 }
 
 .info-profile{
@@ -134,7 +151,7 @@ body {
 
 .gender-birthday{
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: lighter;
 }
 
 .info-inject {
