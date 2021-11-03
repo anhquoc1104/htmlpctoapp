@@ -1,8 +1,4 @@
-@media(min-width: 600px) {
-    body {
-        display: none;
-    }
-}
+
 @font-face {
     font-family: "MyFont";
     src: url("/resources/font/OpenSans-Regular.ttf") format("truetype"),
@@ -51,7 +47,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: var(--width);
-    height: calc(var(--height) - 45%);
+    height: calc(var(--height) - 40%);
 }
 
 .header {
@@ -167,14 +163,17 @@ body {
 }
 
 .below{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: var(--width);
     margin: 0;
     padding: 0 0px;
+
 }
 
 .below img{
-    width: var(--width);
-    height: var(--height);
+    width: 80%;
 }
 
 /* css Location Province */
@@ -296,4 +295,30 @@ body {
 
 .bg-two-vacxin {
     background-color: var(--color-two-vacxin);
+}
+
+@media(min-width: 600px) {
+    body {
+        display: none;
+    }
+}
+@media  (max-height: 700px) {
+
+    * {
+        font-size: 12px;
+    }
+    .header{
+        margin: 10px;
+    }
+    .above {
+        height: 65%;
+    }
+
+    .qr-code {
+        width: 60%;
+    }
+
+    .qr-code img {
+        width: 65%;
+    }
 }

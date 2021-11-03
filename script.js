@@ -1,7 +1,7 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-let hideQrcode = false
+let zoomoutQRcode = false
 
 window.setInterval("updateTime()", 1000);
 function updateTime() {
@@ -21,20 +21,18 @@ $('.location-header-text img').addEventListener('click', function () {
 })
 
 // Zoom in/ zoom put qr code
+let timeout = null
+let countdown = 30
 $('.qr-code').addEventListener('click', function () {
-    hideQrcode = !hideQrcode
-    if (!hideQrcode) {
-        $('.qr-time-update').style.display = 'block'
-        $('.qr-info-hide-text').style.display = 'block'
-        $('.header-location').style.display = 'block'
-        $('.info-profile').style.display = 'block'
-        $('.info-profile').style.textAlign = 'center'
-        $('.qr-code').style.width = '65%'
-        $('.province-text-hide').style.display = 'none'
-        $('.settimeout-hide').style.display = 'none'
-        // $('.settimeout-hide-time').style.display = 'none'
-
-
+    zoomoutQRcode = !zoomoutQRcode
+    if (!zoomoutQRcode) {
+        if (timeout) {
+            clearInterval(timeout)
+            timeout = null
+            countdown = 30
+            $(".settimeout-hide-time").innerHTML = `30s`
+        }
+        showQRcode()
     } else {
         $('.qr-time-update').style.display = 'none'
         $('.qr-info-hide-text').style.display = 'none'
@@ -44,9 +42,34 @@ $('.qr-code').addEventListener('click', function () {
         $('.settimeout-hide').style.display = 'block'
         // $('.settimeout-hide-time').style.display = 'block'
         $('.qr-code').style.width = '90%'
+        timeout = setInterval(function () {
+            --countdown
+            $(".settimeout-hide-time").innerHTML = `${countdown}s`
+            if (countdown == 0) {
+                clearInterval(timeout)
+                timeout = null
+                showQRcode()
+                zoomoutQRcode = !zoomoutQRcode
+                countdown = 30
+                $(".settimeout-hide-time").innerHTML = `30s`
+            }
+        }, 1000)
     }
 
 })
+
+
+function showQRcode() {
+    $('.qr-time-update').style.display = 'block'
+    $('.qr-info-hide-text').style.display = 'block'
+    $('.header-location').style.display = 'block'
+    $('.info-profile').style.display = 'block'
+    $('.info-profile').style.textAlign = 'center'
+    $('.qr-code').style.width = '65%'
+    $('.province-text-hide').style.display = 'none'
+    $('.settimeout-hide').style.display = 'none'
+    // $('.settimeout-hide-time').style.display = 'none'
+}
 
 $('.province').addEventListener('click', function (e) {
     const province = e.target.id
