@@ -55,9 +55,7 @@ $('.qr-code').addEventListener('click', function () {
             }
         }, 1000)
     }
-
 })
-
 
 function showQRcode() {
     $('.qr-time-update').style.display = 'block'
