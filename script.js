@@ -97,6 +97,11 @@ $('.province').addEventListener('click', function (e) {
             $('.header-location span').innerHTML = 'Bình Thuận'
             $('.province-text-hide').innerHTML = 'Bình Thuận'
             break
+        case 'binhdinh':
+            $('.qr-code img').src = "./resources/img/qr/qr-code-hinhdinh.jpg"
+            $('.header-location span').innerHTML = 'Bình Định'
+            $('.province-text-hide').innerHTML = 'Bình Định'
+            break
         case 'binhduong':
             $('.qr-code img').src = "./resources/img/qr/qr-code-binhduong.jpg"
             $('.header-location span').innerHTML = 'Bình Dương'
@@ -106,11 +111,6 @@ $('.province').addEventListener('click', function (e) {
             $('.qr-code img').src = "./resources/img/qr/qr-code-binhphuoc.jpg"
             $('.header-location span').innerHTML = 'Bình Phước'
             $('.province-text-hide').innerHTML = 'Bình Phước'
-            break
-        case 'cantho':
-            $('.qr-code img').src = "./resources/img/qr/qr-code-cantho.jpg"
-            $('.header-location span').innerHTML = 'Cần Thơ'
-            $('.province-text-hide').innerHTML = 'Cần Thơ'
             break
         case 'danang':
             $('.qr-code img').src = "./resources/img/qr/qr-code-danang.jpg"
