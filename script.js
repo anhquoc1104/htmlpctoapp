@@ -98,7 +98,7 @@ $('.province').addEventListener('click', function (e) {
             $('.province-text-hide').innerHTML = 'Bình Thuận'
             break
         case 'binhdinh':
-            $('.qr-code img').src = "./resources/img/qr/qr-code-hinhdinh.jpg"
+            $('.qr-code img').src = "./resources/img/qr/qr-code-binhdinh.jpg"
             $('.header-location span').innerHTML = 'Bình Định'
             $('.province-text-hide').innerHTML = 'Bình Định'
             break
